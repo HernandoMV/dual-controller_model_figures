@@ -13,9 +13,9 @@ repo_path = path.abspath(path.dirname(__file__))
 out_path = path.join(repo_path, 'output_plots')
 
 # read the data
-dual_model_file = path.join(repo_path, 'data/data_complete/reward_100trails_500timesteps.csv')
-rpe_model_file = path.join(repo_path, 'data/rewards_and_weights/RPE_alone_reward_100trails_500timesteps.csv')
-ape_model_file = path.join(repo_path, 'data/rewards_and_weights/APE_alone_reward_100trails_500timesteps.csv')
+dual_model_file = path.join(repo_path, 'data/Intact_reward_100trails_1000timesteps.csv')
+rpe_model_file = path.join(repo_path, 'data/NoTail_reward_100trails_1000timesteps.csv')
+ape_model_file = path.join(repo_path, 'data/NoDorsal_reward_100trails_1000timesteps.csv')
 
 dual_model = pd.read_csv(dual_model_file, header=None).to_numpy()
 rpe_model = pd.read_csv(rpe_model_file, header=None).to_numpy()
