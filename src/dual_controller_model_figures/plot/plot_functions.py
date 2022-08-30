@@ -46,7 +46,7 @@ def make_figure_mean_differences_quantiles(model_diffs, top_ci, bot_ci, xsbin):
     plt.plot(xsbin, model_diffs, color='k', label='observed data')
     plt.plot(xsbin, top_ci, linestyle='--', color='gray', label='95% ci')
     plt.plot(xsbin, bot_ci, linestyle='--', color='gray')
-    plt.fill_between(xsbin, top_ci, model_diffs, where=model_diffs >= top_ci,
+    plt.fill_between(xsbin, bot_ci, model_diffs, where=model_diffs <= bot_ci,
                     facecolor='k', alpha=.2, interpolate=True)
     plt.ylabel('performance difference (%)')
     plt.xlabel('trial number')
